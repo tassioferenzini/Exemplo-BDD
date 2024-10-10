@@ -28,7 +28,8 @@ When('a senha {string}', function (pass) {
   password = pass; // Define a senha usada para tentar o login
   // Executa o login após ter definido o usuário e a senha
   loginMessage = login(username, password);
-});*/
+});
+*/
 
 Then('o login deve ser bem-sucedido e eu devo ver a mensagem {string}', async function (expectedMessage) {
   await new Promise(r => setTimeout(r, 0)); // Garantir que o `expect` foi carregado

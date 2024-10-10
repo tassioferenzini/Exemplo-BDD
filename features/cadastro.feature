@@ -10,18 +10,18 @@ Funcionalidade: Cadastro de usuário
     Quando eu insiro os seguintes dados:
       | nome     | senha    | email              |
       | joao     | senha123 | joao@example.com   |
-      | maria    | senha456 | maria@example.com  |
+      | maria    | senha4 | maria@example.com  |
     Então o cadastro deve ser realizado com sucesso para cada um dos usuários
 
   Cenário: Cadastro com dados inválidos
     Dado que eu estou na página de cadastro
     Quando eu insiro os seguintes dados:
       | nome     | senha | email             |
-      | joao     |       | joao@example.com  | # Senha vazia
-      |          | senha | maria@example.com | # Nome vazio
-      | carlos   | s     | carlos@example.com| # Senha muito curta
+      | joao     |       | joao@example.com  |
+      |          | senha | maria@example.com |
+      | carlos   | s     | carlos@example.com| 
     Então o cadastro não deve ser realizado e eu devo ver as mensagens de erro correspondentes:
-      | nome     | mensagem de erro                    |
-      | joao     | A senha é obrigatória              |
-      |          | O nome de usuário é obrigatório    |
+      | nome     | mensagem de erro                         |
+      | joao     | A senha é obrigatória                    |
+      |          | O nome de usuário é obrigatório          |
       | carlos   | A senha deve ter pelo menos 6 caracteres |
